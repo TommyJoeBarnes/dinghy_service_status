@@ -1,7 +1,7 @@
 name: Update JSON from Email
 
 on:
-  repository_dispatch:
+  workflow_dispatch:
 
 jobs:
   update:
