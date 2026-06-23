@@ -1,7 +1,7 @@
-name: Update JSON
+name: Update JSON from Email
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
 
 jobs:
   update:
@@ -10,5 +10,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Test step
-        run: echo "Workflow is working"
+      - name: Update JSON
+        run: |
+          echo '${{ github.event.client_payload.data }}' > dinghy_service_status.json
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "auto-update"
+          git config --global user.email "auto@github.com"
+          git add dinghy_service_status.json
+          git commit -m "Update via PowerApps"
+          git push
