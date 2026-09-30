@@ -1,10 +1,10 @@
 {
-  "available": false,
+  "available": true,
   "lastUpdated": "temp no date yet",
   "notes": "Text input",
-  "noticeStatus": " ",
-  "paymentUrl": " ",
-  "price": 0,
+  "noticeStatus": "Early Notice",
+  "paymentUrl": "https://www.paypal.com/ncp/payment/2CVLWFZ6953PL",
+  "price": 15,
   "service": "Dinghy Service",
-  "status": "Not Available"
+  "status": "Available Early Service"
 }
